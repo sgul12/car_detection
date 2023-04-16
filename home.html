@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="it">
+  <meta name="keywords" content="AI, Car Detector, AI Project, Deep Learning">
+  
+  <meta name="author" content="">
+
+  <title>Car Detector</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/plugins/fontawesome/css/all.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+</head>
+
+
+<body id="top-header">
+
+
+<!-- LOADER TEMPLATE -->
+<div id="page-loader">
+    <div class="loader-icon fa fa-spin colored-border"></div>
+</div>
+<!-- /LOADER TEMPLATE -->
+
+     <!-- NAVBAR
+    ================================================= -->
+ 
+ <!-- HERO
+    ================================================== -->
+    <section class="banner-area py-5" id="banner-4">
+       <div class="overlay feature-overlay"></div>
+        <!-- Content -->
+        <div class="container">
+            <div class="row  align-items-center justify-content-center">
+                <div class="col-md-12 col-lg-9">
+                   <div class="banner-content2 text-center style-2">
+                        <!-- Heading -->
+                        <h1 class="display-4 mb-4 ">
+                            AI Car Detection
+                        </h1>
+
+                        <!-- Subheading -->
+                        <p class="lead mb-5 pr-0">
+                            Created as part of AI Camp's Summer Intern Program<br>
+By Sami Gul
+                        </p>
+
+                        <!-- Button -->
+                            <a class="mb-0" id='seefood_button'>
+                                <form id='seefood_form' method=post enctype=multipart/form-data>
+                                    <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
+                                </form>
+                                <button href="#" target="_blank" class="btn btn-white btn-circled btn-text">
+                                    <i class="fas fa-camera pr-2 left" aria-hidden="true"></i> Click to detect a car!
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+<a id="motivation"></a>
+  <h2 class="section-title section-title-padding mt-3 text-center">
+                            Motivation 
+                        </h2>
+      <p class="h4">     This model allows us to detect cars on roads and highways. One way to expand on this idea is to run this model to count cars and trucks on a particular highway and collect daily data. This data could help cities and companies plan infrastructure projects such as adding more lanes or building rest stops and gas stations based on the number of cars and trucks.
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    <!-- Main jQuery -->
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
+    <script>
+        // added to get upload with a button working
+        document.getElementById('seefood_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('seefood_input_field').click();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // seefood_input_field
+            $('#seefood_button').click(function() {
+
+            });
+        });
+    </script>
+  </body>
+  </html>
+   
